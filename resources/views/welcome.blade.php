@@ -1,140 +1,1294 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <title>Александр и Кристина</title>
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
+<body class="antialiased">
+    <div class="pointer-events-none fixed top-0 left-0 right-0 z-[-1] h-full opacity-30">
+        <canvas id="sakura" class="z-10"></canvas>
+    </div>
+    <div class="grid items-center sm:grid-cols-2">
+        <div class="order-2 py-10 text-center sm:order-1">
+            <h1 class="mb-4 text-3xl font-bold text-gray-900 sm:text-5xl">Александр и&nbsp;Кристина</h1>
+            <div class="mb-3 text-2xl sm:text-3xl">Приглашение на свадьбу</div>
+            <h2 class="text-xl sm:text-2xl">28 июля 2023 г.</h2>
+            <div>
+                {{ trans_choice('Остался :count день|Осталось :count дня|Осталось :count дней', $days, [], 'ru') }}
+                <span id="countdown">3:00:00</span>
+            </div>
+        </div>
+        <img src="{{ asset('img/sk.jpg') }}" alt="" class="order-1 w-full sm:order-2">
+    </div>
+
+    <div class="">
+        <div class="grid items-center justify-center bg-white/50 backdrop-blur-sm sm:grid-cols-2">
+            <div id="map" class="order-2 min-h-[50vh] w-full text-center sm:order-1"></div>
+            <div class="order-1 px-4 py-10 sm:order-2 sm:text-center">
+                <h3 class="mb-3 text-center text-4xl">Сбор гостей</h3>
+                <p class="text-center">28 июля 2023 в 16:00</p>
+                <p class="text-center">Загородный клуб «Завидное»</p>
+                <p class="text-sm">Адрес: Московская область, Ленинский р-н, пос. Измайлово, 23с1, банкетный зал №10.
+                </p>
+                <p>Встречаемся на фуршете, который будет проходить на улице перед залом.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center bg-neutral-100/50 py-10 px-4">
+        <div class="text-center sm:w-1/2">
+            <h3>Самые любимые и&nbsp;дорогие друзья!</h3>
+            <p>Мы приглашаем Вас на&nbsp;нашу долгожданную свадьбу!</p>
+            <p>С&nbsp;радостью примем в&nbsp;качестве подарка вклад в&nbsp;бюджет свадебного путешествия, а&nbsp;вместо
+                цветов бутылочку
+                чего-нибудь эдакого для нашего семейного бара 😉</p>
+            <p>Будем благодарны, если Вы&nbsp;воздержитесь от&nbsp;криков «Горько» на&nbsp;празднике,
+                мы&nbsp;стеснительные))))</p>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center bg-white/50 py-10 px-4 backdrop-blur-sm">
+        <div class="text-center">
+            <h3 class="mb-3 text-4xl">Дресс-код</h3>
+            Уважаемые гости, мы будем Вам очень признательны, если в своём наряде Вы выберете эти оттенки.
+            <div class="flex justify-around">
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#e2be5e] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-            @endif
-
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#feceba] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#a79d9e] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#fdd3d4] sm:m-10 sm:h-20 sm:w-20">
+                </div>
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#aedcd2] sm:m-10 sm:h-20 sm:w-20">
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    <div class="flex flex-col items-center justify-center bg-neutral-200/50 py-10 px-4 backdrop-blur-sm">
+        <div class="text-center">
+            <h3>План рассадки гостей</h3>
+            Эта информация появится здесь перед свадьбой, обязательно ознакомьтесь.
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center bg-white/50 py-10 px-4 backdrop-blur-sm">
+        <div class="w-1/2">
+            <h3 class="text-center">Подтвердите присутствие</h3>
+
+            <form>
+                <div class="mb-6">
+                    <label for="fullname" class="mb-2 block text-sm font-medium text-gray-900">Ваше имя и
+                        фамилия</label>
+                    <input id="fullname" type="text"
+                           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-orange-500 focus:ring-orange-500"
+                           placeholder="" required>
+                </div>
+                <div class="grid sm:grid-cols-2">
+                    <div>
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="form_budu" type="radio" name="rsvp" value="yes"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       required>
+                            </div>
+                            <label for="form_budu" class="ml-2 text-sm font-medium text-gray-900">Точно буду</label>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="form_ne_budu" type="radio" name="rsvp" value="no"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       required>
+                            </div>
+                            <label for="form_ne_budu" class="ml-2 text-sm font-medium text-gray-900">К сожалению не
+                                смогу</label>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="form_one" type="radio" name="count" value="one"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       required>
+                            </div>
+                            <label for="form_one" class="ml-2 text-sm font-medium text-gray-900">Буду один/одна</label>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="form_plusone" type="radio" name="count" value="plusone"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       required>
+                            </div>
+                            <label for="form_plusone" class="ml-2 text-sm font-medium text-gray-900">Буду с
+                                парой</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <div class="flex items-start">
+                        <div class="flex h-5 items-center">
+                            <input id="childs" type="checkbox" value="true"
+                                   class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-orange-300">
+                        </div>
+                        <label for="childs" class="ml-2 text-sm font-medium text-gray-900">С детьми</label>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex h-5 items-center">
+                            <input id="oncar" type="checkbox" value=""
+                                   class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-orange-300">
+                        </div>
+                        <label for="oncar" class="ml-2 text-sm font-medium text-gray-900">На машине</label>
+                    </div>
+                </div>
+                @php
+                    $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь'];
+                @endphp
+                <div class="mb-6">
+                    @foreach ($buhlos as $buhlo)
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="buhlo_{{ Str::slug($buhlo) }}" name="buhlo[]" type="checkbox"
+                                       value="{{ $buhlo }}"
+                                       class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-orange-300">
+                            </div>
+                            <label for="buhlo_{{ Str::slug($buhlo) }}"
+                                   class="ml-2 text-sm font-medium text-gray-900">{{ $buhlo }}</label>
+                        </div>
+                    @endforeach
+                </div>
+                <button type="submit"
+                        class="w-full rounded-lg bg-orange-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-orange-300 sm:w-auto">Отправить</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e529a9aa-d658-496d-9135-170bc55437dd&onload=init"
+            type="text/javascript" async></script>
+
+    <script id="sakura_point_vsh" type="x-shader/x_vertex">
+                uniform mat4 uProjection;
+                uniform mat4 uModelview;
+                uniform vec3 uResolution;
+                uniform vec3 uOffset;
+                uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+                uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+                attribute vec3 aPosition;
+                attribute vec3 aEuler;
+                attribute vec2 aMisc; //x:size, y:fade
+
+                varying vec3 pposition;
+                varying float psize;
+                varying float palpha;
+                varying float pdist;
+
+                //varying mat3 rotMat;
+                varying vec3 normX;
+                varying vec3 normY;
+                varying vec3 normZ;
+                varying vec3 normal;
+
+                varying float diffuse;
+                varying float specular;
+                varying float rstop;
+                varying float distancefade;
+
+                void main(void) {
+                    // Projection is based on vertical angle
+                    vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
+                    gl_Position = uProjection * pos;
+                    gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
+
+                    pposition = pos.xyz;
+                    psize = aMisc.x;
+                    pdist = length(pos.xyz);
+                    palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
+
+                    vec3 elrsn = sin(aEuler);
+                    vec3 elrcs = cos(aEuler);
+                    mat3 rotx = mat3(
+                        1.0, 0.0, 0.0,
+                        0.0, elrcs.x, elrsn.x,
+                        0.0, -elrsn.x, elrcs.x
+                    );
+                    mat3 roty = mat3(
+                        elrcs.y, 0.0, -elrsn.y,
+                        0.0, 1.0, 0.0,
+                        elrsn.y, 0.0, elrcs.y
+                    );
+                    mat3 rotz = mat3(
+                        elrcs.z, elrsn.z, 0.0,
+                        -elrsn.z, elrcs.z, 0.0,
+                        0.0, 0.0, 1.0
+                    );
+                    mat3 rotmat = rotx * roty * rotz;
+                    normal = rotmat[2];
+
+                    mat3 trrotm = mat3(
+                        rotmat[0][0], rotmat[1][0], rotmat[2][0],
+                        rotmat[0][1], rotmat[1][1], rotmat[2][1],
+                        rotmat[0][2], rotmat[1][2], rotmat[2][2]
+                    );
+                    normX = trrotm[0];
+                    normY = trrotm[1];
+                    normZ = trrotm[2];
+
+                    const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
+
+                    float tmpdfs = dot(lit, normal);
+                    if(tmpdfs < 0.0) {
+                        normal = -normal;
+                        tmpdfs = dot(lit, normal);
+                    }
+                    diffuse = 0.4 + tmpdfs;
+
+                    vec3 eyev = normalize(-pos.xyz);
+                    if(dot(eyev, normal) > 0.0) {
+                        vec3 hv = normalize(eyev + lit);
+                        specular = pow(max(dot(hv, normal), 0.0), 20.0);
+                    }
+                    else {
+                        specular = 0.0;
+                    }
+
+                    rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
+                    rstop = pow(rstop, 0.5);
+                    //-0.69315 = ln(0.5)
+                    distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
+                }
+                </script>
+    <script id="sakura_point_fsh" type="x-shader/x_fragment">
+                #ifdef GL_ES
+                //precision mediump float;
+                precision highp float;
+                #endif
+
+                uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+                uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+                const vec3 fadeCol = vec3(0.08, 0.03, 0.06);
+
+                varying vec3 pposition;
+                varying float psize;
+                varying float palpha;
+                varying float pdist;
+
+                //varying mat3 rotMat;
+                varying vec3 normX;
+                varying vec3 normY;
+                varying vec3 normZ;
+                varying vec3 normal;
+
+                varying float diffuse;
+                varying float specular;
+                varying float rstop;
+                varying float distancefade;
+
+                float ellipse(vec2 p, vec2 o, vec2 r) {
+                    vec2 lp = (p - o) / r;
+                    return length(lp) - 1.0;
+                }
+
+                void main(void) {
+                    vec3 p = vec3(gl_PointCoord - vec2(0.5, 0.5), 0.0) * 2.0;
+                    vec3 d = vec3(0.0, 0.0, -1.0);
+                    float nd = normZ.z; //dot(-normZ, d);
+                    if(abs(nd) < 0.0001) discard;
+
+                    float np = dot(normZ, p);
+                    vec3 tp = p + d * np / nd;
+                    vec2 coord = vec2(dot(normX, tp), dot(normY, tp));
+
+                    //angle = 15 degree
+                    const float flwrsn = 0.258819045102521;
+                    const float flwrcs = 0.965925826289068;
+                    mat2 flwrm = mat2(flwrcs, -flwrsn, flwrsn, flwrcs);
+                    vec2 flwrp = vec2(abs(coord.x), coord.y) * flwrm;
+
+                    float r;
+                    if(flwrp.x < 0.0) {
+                        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
+                    }
+                    else {
+                        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
+                    }
+
+                    if(r > rstop) discard;
+
+                    vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
+                    float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
+                    col *= vec3(1.0, grady, grady);
+                    col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
+                    col = col * diffuse + specular;
+
+                    col = mix(fadeCol, col, distancefade);
+
+                    float alpha = (rstop > 0.001)? (0.5 - r / (rstop * 2.0)) : 1.0;
+                    alpha = smoothstep(0.0, 1.0, alpha) * palpha;
+
+                    gl_FragColor = vec4(col * 0.5, alpha);
+                }
+                </script>
+    <!-- effects -->
+    <script id="fx_common_vsh" type="x-shader/x_vertex">
+                uniform vec3 uResolution;
+                attribute vec2 aPosition;
+
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+
+                void main(void) {
+                    gl_Position = vec4(aPosition, 0.0, 1.0);
+                    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+                    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+                }
+                </script>
+    <script id="bg_fsh" type="x-shader/x_fragment">
+                #ifdef GL_ES
+                //precision mediump float;
+                precision highp float;
+                #endif
+
+                uniform vec2 uTimes;
+
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+
+                void main(void) {
+                    vec3 col;
+                    float c;
+                    vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
+                    c = exp(-pow(length(tmpv) * 1.8, 2.0));
+                    col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);
+                    gl_FragColor = vec4(col * 0.5, 1.0);
+                }
+                </script>
+    <script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
+                #ifdef GL_ES
+                //precision mediump float;
+                precision highp float;
+                #endif
+                uniform sampler2D uSrc;
+                uniform vec2 uDelta;
+
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+
+                void main(void) {
+                    vec4 col = texture2D(uSrc, texCoord);
+                    gl_FragColor = vec4(col.rgb * 2.0 - vec3(0.5), 1.0);
+                }
+                </script>
+    <script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
+                #ifdef GL_ES
+                //precision mediump float;
+                precision highp float;
+                #endif
+                uniform sampler2D uSrc;
+                uniform vec2 uDelta;
+                uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
+
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+
+                void main(void) {
+                    vec4 col = texture2D(uSrc, texCoord);
+                    col = col + texture2D(uSrc, texCoord + uBlurDir.xy * uDelta);
+                    col = col + texture2D(uSrc, texCoord - uBlurDir.xy * uDelta);
+                    col = col + texture2D(uSrc, texCoord + (uBlurDir.xy + uBlurDir.zw) * uDelta);
+                    col = col + texture2D(uSrc, texCoord - (uBlurDir.xy + uBlurDir.zw) * uDelta);
+                    gl_FragColor = col / 5.0;
+                }
+                </script>
+    <!-- effect fragment shader template -->
+    <script id="fx_common_fsh" type="x-shader/x_fragment">
+                #ifdef GL_ES
+                //precision mediump float;
+                precision highp float;
+                #endif
+                uniform sampler2D uSrc;
+                uniform vec2 uDelta;
+
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+
+                void main(void) {
+                    gl_FragColor = texture2D(uSrc, texCoord);
+                }
+                </script>
+    <!-- post processing -->
+    <script id="pp_final_vsh" type="x-shader/x_vertex">
+                uniform vec3 uResolution;
+                attribute vec2 aPosition;
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+                void main(void) {
+                    gl_Position = vec4(aPosition, 0.0, 1.0);
+                    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+                    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+                }
+                </script>
+    <script id="pp_final_fsh" type="x-shader/x_fragment">
+                #ifdef GL_ES
+                //precision mediump float;
+                precision highp float;
+                #endif
+                uniform sampler2D uSrc;
+                uniform sampler2D uBloom;
+                uniform vec2 uDelta;
+                varying vec2 texCoord;
+                varying vec2 screenCoord;
+                void main(void) {
+                    vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
+                    vec4 bloomcol = texture2D(uBloom, texCoord);
+                    vec4 col;
+                    col = srccol + bloomcol * (vec4(1.0) + srccol);
+                    col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);
+                    col = pow(col, vec4(0.45454545454545)); //(1.0 / 2.2)
+
+                    gl_FragColor = vec4(col.rgb, 1.0);
+                    gl_FragColor.a = 1.0;
+                }
+                </script>
+    <script>
+        // Utilities
+        var Vector3 = {};
+        var Matrix44 = {};
+        Vector3.create = function(x, y, z) {
+            return {
+                'x': x,
+                'y': y,
+                'z': z
+            };
+        };
+        Vector3.dot = function(v0, v1) {
+            return v0.x * v1.x + v0.y * v1.y + v0.z * v1.z;
+        };
+        Vector3.cross = function(v, v0, v1) {
+            v.x = v0.y * v1.z - v0.z * v1.y;
+            v.y = v0.z * v1.x - v0.x * v1.z;
+            v.z = v0.x * v1.y - v0.y * v1.x;
+        };
+        Vector3.normalize = function(v) {
+            var l = v.x * v.x + v.y * v.y + v.z * v.z;
+            if (l > 0.00001) {
+                l = 1.0 / Math.sqrt(l);
+                v.x *= l;
+                v.y *= l;
+                v.z *= l;
+            }
+        };
+        Vector3.arrayForm = function(v) {
+            if (v.array) {
+                v.array[0] = v.x;
+                v.array[1] = v.y;
+                v.array[2] = v.z;
+            } else {
+                v.array = new Float32Array([v.x, v.y, v.z]);
+            }
+            return v.array;
+        };
+        Matrix44.createIdentity = function() {
+            return new Float32Array([1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]);
+        };
+        Matrix44.loadProjection = function(m, aspect, vdeg, near, far) {
+            var h = near * Math.tan(vdeg * Math.PI / 180.0 * 0.5) * 2.0;
+            var w = h * aspect;
+
+            m[0] = 2.0 * near / w;
+            m[1] = 0.0;
+            m[2] = 0.0;
+            m[3] = 0.0;
+
+            m[4] = 0.0;
+            m[5] = 2.0 * near / h;
+            m[6] = 0.0;
+            m[7] = 0.0;
+
+            m[8] = 0.0;
+            m[9] = 0.0;
+            m[10] = -(far + near) / (far - near);
+            m[11] = -1.0;
+
+            m[12] = 0.0;
+            m[13] = 0.0;
+            m[14] = -2.0 * far * near / (far - near);
+            m[15] = 0.0;
+        };
+        Matrix44.loadLookAt = function(m, vpos, vlook, vup) {
+            var frontv = Vector3.create(vpos.x - vlook.x, vpos.y - vlook.y, vpos.z - vlook.z);
+            Vector3.normalize(frontv);
+            var sidev = Vector3.create(1.0, 0.0, 0.0);
+            Vector3.cross(sidev, vup, frontv);
+            Vector3.normalize(sidev);
+            var topv = Vector3.create(1.0, 0.0, 0.0);
+            Vector3.cross(topv, frontv, sidev);
+            Vector3.normalize(topv);
+
+            m[0] = sidev.x;
+            m[1] = topv.x;
+            m[2] = frontv.x;
+            m[3] = 0.0;
+
+            m[4] = sidev.y;
+            m[5] = topv.y;
+            m[6] = frontv.y;
+            m[7] = 0.0;
+
+            m[8] = sidev.z;
+            m[9] = topv.z;
+            m[10] = frontv.z;
+            m[11] = 0.0;
+
+            m[12] = -(vpos.x * m[0] + vpos.y * m[4] + vpos.z * m[8]);
+            m[13] = -(vpos.x * m[1] + vpos.y * m[5] + vpos.z * m[9]);
+            m[14] = -(vpos.x * m[2] + vpos.y * m[6] + vpos.z * m[10]);
+            m[15] = 1.0;
+        };
+
+        //
+        var timeInfo = {
+            'start': 0,
+            'prev': 0, // Date
+            'delta': 0,
+            'elapsed': 0 // Number(sec)
+        };
+
+        //
+        var gl;
+        var renderSpec = {
+            'width': 0,
+            'height': 0,
+            'aspect': 1,
+            'array': new Float32Array(3),
+            'halfWidth': 0,
+            'halfHeight': 0,
+            'halfArray': new Float32Array(3)
+            // and some render targets. see setViewport()
+        };
+        renderSpec.setSize = function(w, h) {
+            renderSpec.width = w;
+            renderSpec.height = h;
+            renderSpec.aspect = renderSpec.width / renderSpec.height;
+            renderSpec.array[0] = renderSpec.width;
+            renderSpec.array[1] = renderSpec.height;
+            renderSpec.array[2] = renderSpec.aspect;
+
+            renderSpec.halfWidth = Math.floor(w / 2);
+            renderSpec.halfHeight = Math.floor(h / 2);
+            renderSpec.halfArray[0] = renderSpec.halfWidth;
+            renderSpec.halfArray[1] = renderSpec.halfHeight;
+            renderSpec.halfArray[2] = renderSpec.halfWidth / renderSpec.halfHeight;
+        };
+
+        function deleteRenderTarget(rt) {
+            gl.deleteFramebuffer(rt.frameBuffer);
+            gl.deleteRenderbuffer(rt.renderBuffer);
+            gl.deleteTexture(rt.texture);
+        }
+
+        function createRenderTarget(w, h) {
+            var ret = {
+                'width': w,
+                'height': h,
+                'sizeArray': new Float32Array([w, h, w / h]),
+                'dtxArray': new Float32Array([1.0 / w, 1.0 / h])
+            };
+            ret.frameBuffer = gl.createFramebuffer();
+            ret.renderBuffer = gl.createRenderbuffer();
+            ret.texture = gl.createTexture();
+
+            gl.bindTexture(gl.TEXTURE_2D, ret.texture);
+            gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+
+            gl.bindFramebuffer(gl.FRAMEBUFFER, ret.frameBuffer);
+            gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, ret.texture, 0);
+
+            gl.bindRenderbuffer(gl.RENDERBUFFER, ret.renderBuffer);
+            gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, w, h);
+            gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, ret.renderBuffer);
+
+            gl.bindTexture(gl.TEXTURE_2D, null);
+            gl.bindRenderbuffer(gl.RENDERBUFFER, null);
+            gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+
+            return ret;
+        }
+
+        function compileShader(shtype, shsrc) {
+            var retsh = gl.createShader(shtype);
+
+            gl.shaderSource(retsh, shsrc);
+            gl.compileShader(retsh);
+
+            if (!gl.getShaderParameter(retsh, gl.COMPILE_STATUS)) {
+                var errlog = gl.getShaderInfoLog(retsh);
+                gl.deleteShader(retsh);
+                console.error(errlog);
+                return null;
+            }
+            return retsh;
+        }
+
+        function createShader(vtxsrc, frgsrc, uniformlist, attrlist) {
+            var vsh = compileShader(gl.VERTEX_SHADER, vtxsrc);
+            var fsh = compileShader(gl.FRAGMENT_SHADER, frgsrc);
+
+            if (vsh == null || fsh == null) {
+                return null;
+            }
+
+            var prog = gl.createProgram();
+            gl.attachShader(prog, vsh);
+            gl.attachShader(prog, fsh);
+
+            gl.deleteShader(vsh);
+            gl.deleteShader(fsh);
+
+            gl.linkProgram(prog);
+            if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+                var errlog = gl.getProgramInfoLog(prog);
+                console.error(errlog);
+                return null;
+            }
+
+            if (uniformlist) {
+                prog.uniforms = {};
+                for (var i = 0; i < uniformlist.length; i++) {
+                    prog.uniforms[uniformlist[i]] = gl.getUniformLocation(prog, uniformlist[i]);
+                }
+            }
+
+            if (attrlist) {
+                prog.attributes = {};
+                for (var i = 0; i < attrlist.length; i++) {
+                    var attr = attrlist[i];
+                    prog.attributes[attr] = gl.getAttribLocation(prog, attr);
+                }
+            }
+
+            return prog;
+        }
+
+        function useShader(prog) {
+            gl.useProgram(prog);
+            for (var attr in prog.attributes) {
+                gl.enableVertexAttribArray(prog.attributes[attr]);;
+            }
+        }
+
+        function unuseShader(prog) {
+            for (var attr in prog.attributes) {
+                gl.disableVertexAttribArray(prog.attributes[attr]);;
+            }
+            gl.useProgram(null);
+        }
+
+        /////
+        var projection = {
+            'angle': 60,
+            'nearfar': new Float32Array([0.1, 100.0]),
+            'matrix': Matrix44.createIdentity()
+        };
+        var camera = {
+            'position': Vector3.create(0, 0, 100),
+            'lookat': Vector3.create(0, 0, 0),
+            'up': Vector3.create(0, 1, 0),
+            'dof': Vector3.create(10.0, 4.0, 8.0),
+            'matrix': Matrix44.createIdentity()
+        };
+
+        var pointFlower = {};
+        var meshFlower = {};
+        var sceneStandBy = false;
+
+        var BlossomParticle = function() {
+            this.velocity = new Array(3);
+            this.rotation = new Array(3);
+            this.position = new Array(3);
+            this.euler = new Array(3);
+            this.size = 1.0;
+            this.alpha = 1.0;
+            this.zkey = 0.0;
+        };
+
+        BlossomParticle.prototype.setVelocity = function(vx, vy, vz) {
+            this.velocity[0] = vx;
+            this.velocity[1] = vy;
+            this.velocity[2] = vz;
+        };
+
+        BlossomParticle.prototype.setRotation = function(rx, ry, rz) {
+            this.rotation[0] = rx;
+            this.rotation[1] = ry;
+            this.rotation[2] = rz;
+        };
+
+        BlossomParticle.prototype.setPosition = function(nx, ny, nz) {
+            this.position[0] = nx;
+            this.position[1] = ny;
+            this.position[2] = nz;
+        };
+
+        BlossomParticle.prototype.setEulerAngles = function(rx, ry, rz) {
+            this.euler[0] = rx;
+            this.euler[1] = ry;
+            this.euler[2] = rz;
+        };
+
+        BlossomParticle.prototype.setSize = function(s) {
+            this.size = s;
+        };
+
+        BlossomParticle.prototype.update = function(dt, et) {
+            this.position[0] += this.velocity[0] * dt;
+            this.position[1] += this.velocity[1] * dt;
+            this.position[2] += this.velocity[2] * dt;
+
+            this.euler[0] += this.rotation[0] * dt;
+            this.euler[1] += this.rotation[1] * dt;
+            this.euler[2] += this.rotation[2] * dt;
+        };
+
+        function createPointFlowers() {
+            // get point sizes
+            var prm = gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE);
+            renderSpec.pointSize = {
+                'min': prm[0],
+                'max': prm[1]
+            };
+
+            var vtxsrc = document.getElementById("sakura_point_vsh").textContent;
+            var frgsrc = document.getElementById("sakura_point_fsh").textContent;
+
+            pointFlower.program = createShader(
+                vtxsrc, frgsrc,
+                ['uProjection', 'uModelview', 'uResolution', 'uOffset', 'uDOF', 'uFade'],
+                ['aPosition', 'aEuler', 'aMisc']
+            );
+
+            useShader(pointFlower.program);
+            pointFlower.offset = new Float32Array([0.0, 0.0, 0.0]);
+            pointFlower.fader = Vector3.create(0.0, 10.0, 0.0);
+
+            // paramerters: velocity[3], rotate[3]
+            pointFlower.numFlowers = 1600;
+            pointFlower.particles = new Array(pointFlower.numFlowers);
+            // vertex attributes {position[3], euler_xyz[3], size[1]}
+            pointFlower.dataArray = new Float32Array(pointFlower.numFlowers * (3 + 3 + 2));
+            pointFlower.positionArrayOffset = 0;
+            pointFlower.eulerArrayOffset = pointFlower.numFlowers * 3;
+            pointFlower.miscArrayOffset = pointFlower.numFlowers * 6;
+
+            pointFlower.buffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, pointFlower.buffer);
+            gl.bufferData(gl.ARRAY_BUFFER, pointFlower.dataArray, gl.DYNAMIC_DRAW);
+            gl.bindBuffer(gl.ARRAY_BUFFER, null);
+
+            unuseShader(pointFlower.program);
+
+            for (var i = 0; i < pointFlower.numFlowers; i++) {
+                pointFlower.particles[i] = new BlossomParticle();
+            }
+        }
+
+        function initPointFlowers() {
+            //area
+            pointFlower.area = Vector3.create(20.0, 20.0, 20.0);
+            pointFlower.area.x = pointFlower.area.y * renderSpec.aspect;
+
+            pointFlower.fader.x = 10.0; //env fade start
+            pointFlower.fader.y = pointFlower.area.z; //env fade half
+            pointFlower.fader.z = 0.1; //near fade start
+
+            //particles
+            var PI2 = Math.PI * 2.0;
+            var tmpv3 = Vector3.create(0, 0, 0);
+            var tmpv = 0;
+            var symmetryrand = function() {
+                return (Math.random() * 2.0 - 1.0);
+            };
+            for (var i = 0; i < pointFlower.numFlowers; i++) {
+                var tmpprtcl = pointFlower.particles[i];
+
+                //velocity
+                tmpv3.x = symmetryrand() * 0.3 + 0.8;
+                tmpv3.y = symmetryrand() * 0.2 - 1.0;
+                tmpv3.z = symmetryrand() * 0.3 + 0.5;
+                Vector3.normalize(tmpv3);
+                tmpv = 2.0 + Math.random() * 1.0;
+                tmpprtcl.setVelocity(tmpv3.x * tmpv, tmpv3.y * tmpv, tmpv3.z * tmpv);
+
+                //rotation
+                tmpprtcl.setRotation(
+                    symmetryrand() * PI2 * 0.5,
+                    symmetryrand() * PI2 * 0.5,
+                    symmetryrand() * PI2 * 0.5
+                );
+
+                //position
+                tmpprtcl.setPosition(
+                    symmetryrand() * pointFlower.area.x,
+                    symmetryrand() * pointFlower.area.y,
+                    symmetryrand() * pointFlower.area.z
+                );
+
+                //euler
+                tmpprtcl.setEulerAngles(
+                    Math.random() * Math.PI * 2.0,
+                    Math.random() * Math.PI * 2.0,
+                    Math.random() * Math.PI * 2.0
+                );
+
+                //size
+                tmpprtcl.setSize(0.9 + Math.random() * 0.1);
+            }
+        }
+
+        function renderPointFlowers() {
+            //update
+            var PI2 = Math.PI * 2.0;
+            var limit = [pointFlower.area.x, pointFlower.area.y, pointFlower.area.z];
+            var repeatPos = function(prt, cmp, limit) {
+                if (Math.abs(prt.position[cmp]) - prt.size * 0.5 > limit) {
+                    //out of area
+                    if (prt.position[cmp] > 0) {
+                        prt.position[cmp] -= limit * 2.0;
+                    } else {
+                        prt.position[cmp] += limit * 2.0;
+                    }
+                }
+            };
+            var repeatEuler = function(prt, cmp) {
+                prt.euler[cmp] = prt.euler[cmp] % PI2;
+                if (prt.euler[cmp] < 0.0) {
+                    prt.euler[cmp] += PI2;
+                }
+            };
+
+            for (var i = 0; i < pointFlower.numFlowers; i++) {
+                var prtcl = pointFlower.particles[i];
+                prtcl.update(timeInfo.delta, timeInfo.elapsed);
+                repeatPos(prtcl, 0, pointFlower.area.x);
+                repeatPos(prtcl, 1, pointFlower.area.y);
+                repeatPos(prtcl, 2, pointFlower.area.z);
+                repeatEuler(prtcl, 0);
+                repeatEuler(prtcl, 1);
+                repeatEuler(prtcl, 2);
+
+                prtcl.alpha = 1.0; //(pointFlower.area.z - prtcl.position[2]) * 0.5;
+
+                prtcl.zkey = (camera.matrix[2] * prtcl.position[0] +
+                    camera.matrix[6] * prtcl.position[1] +
+                    camera.matrix[10] * prtcl.position[2] +
+                    camera.matrix[14]);
+            }
+
+            // sort
+            pointFlower.particles.sort(function(p0, p1) {
+                return p0.zkey - p1.zkey;
+            });
+
+            // update data
+            var ipos = pointFlower.positionArrayOffset;
+            var ieuler = pointFlower.eulerArrayOffset;
+            var imisc = pointFlower.miscArrayOffset;
+            for (var i = 0; i < pointFlower.numFlowers; i++) {
+                var prtcl = pointFlower.particles[i];
+                pointFlower.dataArray[ipos] = prtcl.position[0];
+                pointFlower.dataArray[ipos + 1] = prtcl.position[1];
+                pointFlower.dataArray[ipos + 2] = prtcl.position[2];
+                ipos += 3;
+                pointFlower.dataArray[ieuler] = prtcl.euler[0];
+                pointFlower.dataArray[ieuler + 1] = prtcl.euler[1];
+                pointFlower.dataArray[ieuler + 2] = prtcl.euler[2];
+                ieuler += 3;
+                pointFlower.dataArray[imisc] = prtcl.size;
+                pointFlower.dataArray[imisc + 1] = prtcl.alpha;
+                imisc += 2;
+            }
+
+            //draw
+            gl.enable(gl.BLEND);
+            //gl.disable(gl.DEPTH_TEST);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+            var prog = pointFlower.program;
+            useShader(prog);
+
+            gl.uniformMatrix4fv(prog.uniforms.uProjection, false, projection.matrix);
+            gl.uniformMatrix4fv(prog.uniforms.uModelview, false, camera.matrix);
+            gl.uniform3fv(prog.uniforms.uResolution, renderSpec.array);
+            gl.uniform3fv(prog.uniforms.uDOF, Vector3.arrayForm(camera.dof));
+            gl.uniform3fv(prog.uniforms.uFade, Vector3.arrayForm(pointFlower.fader));
+
+            gl.bindBuffer(gl.ARRAY_BUFFER, pointFlower.buffer);
+            gl.bufferData(gl.ARRAY_BUFFER, pointFlower.dataArray, gl.DYNAMIC_DRAW);
+
+            gl.vertexAttribPointer(prog.attributes.aPosition, 3, gl.FLOAT, false, 0, pointFlower.positionArrayOffset *
+                Float32Array.BYTES_PER_ELEMENT);
+            gl.vertexAttribPointer(prog.attributes.aEuler, 3, gl.FLOAT, false, 0, pointFlower.eulerArrayOffset *
+                Float32Array.BYTES_PER_ELEMENT);
+            gl.vertexAttribPointer(prog.attributes.aMisc, 2, gl.FLOAT, false, 0, pointFlower.miscArrayOffset * Float32Array
+                .BYTES_PER_ELEMENT);
+
+            // doubler
+            for (var i = 1; i < 2; i++) {
+                var zpos = i * -2.0;
+                pointFlower.offset[0] = pointFlower.area.x * -1.0;
+                pointFlower.offset[1] = pointFlower.area.y * -1.0;
+                pointFlower.offset[2] = pointFlower.area.z * zpos;
+                gl.uniform3fv(prog.uniforms.uOffset, pointFlower.offset);
+                gl.drawArrays(gl.POINT, 0, pointFlower.numFlowers);
+
+                pointFlower.offset[0] = pointFlower.area.x * -1.0;
+                pointFlower.offset[1] = pointFlower.area.y * 1.0;
+                pointFlower.offset[2] = pointFlower.area.z * zpos;
+                gl.uniform3fv(prog.uniforms.uOffset, pointFlower.offset);
+                gl.drawArrays(gl.POINT, 0, pointFlower.numFlowers);
+
+                pointFlower.offset[0] = pointFlower.area.x * 1.0;
+                pointFlower.offset[1] = pointFlower.area.y * -1.0;
+                pointFlower.offset[2] = pointFlower.area.z * zpos;
+                gl.uniform3fv(prog.uniforms.uOffset, pointFlower.offset);
+                gl.drawArrays(gl.POINT, 0, pointFlower.numFlowers);
+
+                pointFlower.offset[0] = pointFlower.area.x * 1.0;
+                pointFlower.offset[1] = pointFlower.area.y * 1.0;
+                pointFlower.offset[2] = pointFlower.area.z * zpos;
+                gl.uniform3fv(prog.uniforms.uOffset, pointFlower.offset);
+                gl.drawArrays(gl.POINT, 0, pointFlower.numFlowers);
+            }
+
+            //main
+            pointFlower.offset[0] = 0.0;
+            pointFlower.offset[1] = 0.0;
+            pointFlower.offset[2] = 0.0;
+            gl.uniform3fv(prog.uniforms.uOffset, pointFlower.offset);
+            gl.drawArrays(gl.POINT, 0, pointFlower.numFlowers);
+
+            gl.bindBuffer(gl.ARRAY_BUFFER, null);
+            unuseShader(prog);
+
+            gl.enable(gl.DEPTH_TEST);
+            gl.disable(gl.BLEND);
+        }
+
+        // effects
+        //common util
+        function createEffectProgram(vtxsrc, frgsrc, exunifs, exattrs) {
+            var ret = {};
+            var unifs = ['uResolution', 'uSrc', 'uDelta'];
+            if (exunifs) {
+                unifs = unifs.concat(exunifs);
+            }
+            var attrs = ['aPosition'];
+            if (exattrs) {
+                attrs = attrs.concat(exattrs);
+            }
+
+            ret.program = createShader(vtxsrc, frgsrc, unifs, attrs);
+            useShader(ret.program);
+
+            ret.dataArray = new Float32Array([
+                -1.0, -1.0,
+                1.0, -1.0,
+                -1.0, 1.0,
+                1.0, 1.0
+            ]);
+            ret.buffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, ret.buffer);
+            gl.bufferData(gl.ARRAY_BUFFER, ret.dataArray, gl.STATIC_DRAW);
+
+            gl.bindBuffer(gl.ARRAY_BUFFER, null);
+            unuseShader(ret.program);
+
+            return ret;
+        }
+
+        // basic usage
+        // useEffect(prog, srctex({'texture':texid, 'dtxArray':(f32)[dtx, dty]})); //basic initialize
+        // gl.uniform**(...); //additional uniforms
+        // drawEffect()
+        // unuseEffect(prog)
+        // TEXTURE0 makes src
+        function useEffect(fxobj, srctex) {
+            var prog = fxobj.program;
+            useShader(prog);
+            gl.uniform3fv(prog.uniforms.uResolution, renderSpec.array);
+
+            if (srctex != null) {
+                gl.uniform2fv(prog.uniforms.uDelta, srctex.dtxArray);
+                gl.uniform1i(prog.uniforms.uSrc, 0);
+
+                gl.activeTexture(gl.TEXTURE0);
+                gl.bindTexture(gl.TEXTURE_2D, srctex.texture);
+            }
+        }
+
+        function drawEffect(fxobj) {
+            gl.bindBuffer(gl.ARRAY_BUFFER, fxobj.buffer);
+            gl.vertexAttribPointer(fxobj.program.attributes.aPosition, 2, gl.FLOAT, false, 0, 0);
+            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        }
+
+        function unuseEffect(fxobj) {
+            unuseShader(fxobj.program);
+        }
+
+        var effectLib = {};
+
+        function createEffectLib() {
+
+            var vtxsrc, frgsrc;
+            //common
+            var cmnvtxsrc = document.getElementById("fx_common_vsh").textContent;
+
+            //background
+            frgsrc = document.getElementById("bg_fsh").textContent;
+            effectLib.sceneBg = createEffectProgram(cmnvtxsrc, frgsrc, ['uTimes'], null);
+
+            // make brightpixels buffer
+            frgsrc = document.getElementById("fx_brightbuf_fsh").textContent;
+            effectLib.mkBrightBuf = createEffectProgram(cmnvtxsrc, frgsrc, null, null);
+
+            // direction blur
+            frgsrc = document.getElementById("fx_dirblur_r4_fsh").textContent;
+            effectLib.dirBlur = createEffectProgram(cmnvtxsrc, frgsrc, ['uBlurDir'], null);
+
+            //final composite
+            vtxsrc = document.getElementById("pp_final_vsh").textContent;
+            frgsrc = document.getElementById("pp_final_fsh").textContent;
+            effectLib.finalComp = createEffectProgram(vtxsrc, frgsrc, ['uBloom'], null);
+        }
+
+        // background
+        function createBackground() {
+            //console.log("create background");
+        }
+
+        function initBackground() {
+            //console.log("init background");
+        }
+
+        function renderBackground() {
+            gl.disable(gl.DEPTH_TEST);
+
+            useEffect(effectLib.sceneBg, null);
+            gl.uniform2f(effectLib.sceneBg.program.uniforms.uTimes, timeInfo.elapsed, timeInfo.delta);
+            drawEffect(effectLib.sceneBg);
+            unuseEffect(effectLib.sceneBg);
+
+            gl.enable(gl.DEPTH_TEST);
+        }
+
+        // post process
+        var postProcess = {};
+
+        function createPostProcess() {
+            //console.log("create post process");
+        }
+
+        function initPostProcess() {
+            //console.log("init post process");
+        }
+
+        function renderPostProcess() {
+            // gl.enable(gl.TEXTURE_2D);
+            gl.disable(gl.DEPTH_TEST);
+            var bindRT = function(rt, isclear) {
+                gl.bindFramebuffer(gl.FRAMEBUFFER, rt.frameBuffer);
+                gl.viewport(0, 0, rt.width, rt.height);
+                if (isclear) {
+                    gl.clearColor(0, 0, 0, 0);
+                    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+                }
+            };
+
+            //make bright buff
+            bindRT(renderSpec.wHalfRT0, true);
+            useEffect(effectLib.mkBrightBuf, renderSpec.mainRT);
+            drawEffect(effectLib.mkBrightBuf);
+            unuseEffect(effectLib.mkBrightBuf);
+
+            // make bloom
+            for (var i = 0; i < 2; i++) {
+                var p = 1.5 + 1 * i;
+                var s = 2.0 + 1 * i;
+                bindRT(renderSpec.wHalfRT1, true);
+                useEffect(effectLib.dirBlur, renderSpec.wHalfRT0);
+                gl.uniform4f(effectLib.dirBlur.program.uniforms.uBlurDir, p, 0.0, s, 0.0);
+                drawEffect(effectLib.dirBlur);
+                unuseEffect(effectLib.dirBlur);
+
+                bindRT(renderSpec.wHalfRT0, true);
+                useEffect(effectLib.dirBlur, renderSpec.wHalfRT1);
+                gl.uniform4f(effectLib.dirBlur.program.uniforms.uBlurDir, 0.0, p, 0.0, s);
+                drawEffect(effectLib.dirBlur);
+                unuseEffect(effectLib.dirBlur);
+            }
+
+            //display
+            gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+            gl.viewport(0, 0, renderSpec.width, renderSpec.height);
+            gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+            useEffect(effectLib.finalComp, renderSpec.mainRT);
+            gl.uniform1i(effectLib.finalComp.program.uniforms.uBloom, 1);
+            gl.activeTexture(gl.TEXTURE1);
+            gl.bindTexture(gl.TEXTURE_2D, renderSpec.wHalfRT0.texture);
+            drawEffect(effectLib.finalComp);
+            unuseEffect(effectLib.finalComp);
+
+            gl.enable(gl.DEPTH_TEST);
+        }
+
+        /////
+        var SceneEnv = {};
+
+        function createScene() {
+            createEffectLib();
+            createBackground();
+            createPointFlowers();
+            createPostProcess();
+            sceneStandBy = true;
+        }
+
+        function initScene() {
+            initBackground();
+            initPointFlowers();
+            initPostProcess();
+
+            //camera.position.z = 17.320508;
+            camera.position.z = pointFlower.area.z + projection.nearfar[0];
+            projection.angle = Math.atan2(pointFlower.area.y, camera.position.z + pointFlower.area.z) * 180.0 / Math.PI *
+                2.0;
+            Matrix44.loadProjection(projection.matrix, renderSpec.aspect, projection.angle, projection.nearfar[0],
+                projection.nearfar[1]);
+        }
+
+        function renderScene() {
+            //draw
+            Matrix44.loadLookAt(camera.matrix, camera.position, camera.lookat, camera.up);
+
+            gl.enable(gl.DEPTH_TEST);
+
+            //gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+            gl.bindFramebuffer(gl.FRAMEBUFFER, renderSpec.mainRT.frameBuffer);
+            gl.viewport(0, 0, renderSpec.mainRT.width, renderSpec.mainRT.height);
+            gl.clearColor(0.005, 0, 0.05, 0);
+            gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+            renderBackground();
+            renderPointFlowers();
+            renderPostProcess();
+        }
+
+        /////
+        function onResize(e) {
+            makeCanvasFullScreen(document.getElementById("sakura"));
+            setViewports();
+            if (sceneStandBy) {
+                initScene();
+            }
+        }
+
+        function setViewports() {
+            renderSpec.setSize(gl.canvas.width, gl.canvas.height);
+
+            gl.clearColor(0.2, 0.2, 0.5, 1.0);
+            gl.viewport(0, 0, renderSpec.width, renderSpec.height);
+
+            var rtfunc = function(rtname, rtw, rth) {
+                var rt = renderSpec[rtname];
+                if (rt) deleteRenderTarget(rt);
+                renderSpec[rtname] = createRenderTarget(rtw, rth);
+            };
+            rtfunc('mainRT', renderSpec.width, renderSpec.height);
+            rtfunc('wFullRT0', renderSpec.width, renderSpec.height);
+            rtfunc('wFullRT1', renderSpec.width, renderSpec.height);
+            rtfunc('wHalfRT0', renderSpec.halfWidth, renderSpec.halfHeight);
+            rtfunc('wHalfRT1', renderSpec.halfWidth, renderSpec.halfHeight);
+        }
+
+        function render() {
+            renderScene();
+        }
+
+        var animating = true;
+
+        function toggleAnimation(elm) {
+            animating ^= true;
+            if (animating) animate();
+            if (elm) {
+                elm.innerHTML = animating ? "Stop" : "Start";
+            }
+        }
+
+        function stepAnimation() {
+            if (!animating) animate();
+        }
+
+        function animate() {
+            var curdate = new Date();
+            timeInfo.elapsed = (curdate - timeInfo.start) / 1000.0;
+            timeInfo.delta = (curdate - timeInfo.prev) / 1000.0;
+            timeInfo.prev = curdate;
+
+            if (animating) requestAnimationFrame(animate);
+            render();
+        }
+
+        function makeCanvasFullScreen(canvas) {
+            var b = document.body;
+            var d = document.documentElement;
+            fullw = Math.max(b.clientWidth, b.scrollWidth, d.scrollWidth, d.clientWidth);
+            fullh = Math.max(b.clientHeight, b.scrollHeight, d.scrollHeight, d.clientHeight);
+            canvas.width = fullw;
+            canvas.height = fullh;
+        }
+
+        window.addEventListener('load', function(e) {
+            var canvas = document.getElementById("sakura");
+            try {
+                makeCanvasFullScreen(canvas);
+                gl = canvas.getContext('experimental-webgl');
+            } catch (e) {
+                alert("WebGL not supported." + e);
+                console.error(e);
+                return;
+            }
+
+            window.addEventListener('resize', onResize);
+
+            setViewports();
+            createScene();
+            initScene();
+
+            timeInfo.start = new Date();
+            timeInfo.prev = timeInfo.start;
+            animate();
+        });
+
+        //set window.requestAnimationFrame
+        (function(w, r) {
+            w['r' + r] = w['r' + r] || w['webkitR' + r] || w['mozR' + r] || w['msR' + r] || w['oR' + r] || function(c) {
+                w.setTimeout(c, 1000 / 60);
+            };
+        })(window, 'equestAnimationFrame');
+    </script>
+</body>
+
 </html>

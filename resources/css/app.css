@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h3 {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: grayscale(1) brightness(1);
+}
+
+[class*="ymaps-2"][class*="-copyright"],
+[class*="ymaps-2"][class*="-map-copyrights-promo"] {
+    display: none;
+}

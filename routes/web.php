@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $weddingDay = today()
+        ->setTimezone('Europe/Moscow')
+        ->setDate(2023, 07, 28)
+        ->setTime(16, 0, 0);
+    $days = today()->diffInDays($weddingDay);
+    return view('welcome', compact('days'));
 });
