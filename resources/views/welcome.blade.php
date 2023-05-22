@@ -58,15 +58,15 @@
             <h3 class="mb-3 text-4xl">Дресс-код</h3>
             Уважаемые гости, мы будем Вам очень признательны, если в своём наряде Вы выберете эти оттенки.
             <div class="flex justify-around">
-                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#e2be5e] sm:m-10 sm:h-20 sm:w-20">
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#e6e2d6] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#feceba] sm:m-10 sm:h-20 sm:w-20">
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#bbae9e] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#a79d9e] sm:m-10 sm:h-20 sm:w-20">
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#c1d5ca] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#fdd3d4] sm:m-10 sm:h-20 sm:w-20">
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#8abdd0] sm:m-10 sm:h-20 sm:w-20">
                 </div>
-                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#aedcd2] sm:m-10 sm:h-20 sm:w-20">
+                <div class="h-10 w-10 rounded-full border-4 border-white bg-[#5282aa] sm:m-10 sm:h-20 sm:w-20">
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
     <div class="flex flex-col items-center justify-center bg-neutral-200/50 py-10 px-4 backdrop-blur-sm">
         <div class="text-center">
             <h3>План рассадки гостей</h3>
-            Эта информация появится здесь перед свадьбой, обязательно ознакомьтесь.
+            <p>Эта информация появится здесь перед свадьбой, обязательно ознакомьтесь.</p>
         </div>
     </div>
 
@@ -88,15 +88,15 @@
                     <label for="fullname" class="mb-2 block text-sm font-medium text-gray-900">Ваше имя и
                         фамилия</label>
                     <input id="fullname" type="text"
-                           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-orange-500 focus:ring-orange-500"
+                           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-neutral-500 focus:ring-neutral-500"
                            placeholder="" required>
                 </div>
-                <div class="grid sm:grid-cols-2">
+                <div class="mb-6 grid sm:grid-cols-2">
                     <div>
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
                                 <input id="form_budu" type="radio" name="rsvp" value="yes"
-                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300"
                                        required>
                             </div>
                             <label for="form_budu" class="ml-2 text-sm font-medium text-gray-900">Точно буду</label>
@@ -104,18 +104,18 @@
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
                                 <input id="form_ne_budu" type="radio" name="rsvp" value="no"
-                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300"
                                        required>
                             </div>
                             <label for="form_ne_budu" class="ml-2 text-sm font-medium text-gray-900">К сожалению не
                                 смогу</label>
                         </div>
                     </div>
-                    <div class="mb-6">
+                    <div>
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
                                 <input id="form_one" type="radio" name="count" value="one"
-                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300"
                                        required>
                             </div>
                             <label for="form_one" class="ml-2 text-sm font-medium text-gray-900">Буду один/одна</label>
@@ -123,7 +123,7 @@
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
                                 <input id="form_plusone" type="radio" name="count" value="plusone"
-                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-orange-300"
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300"
                                        required>
                             </div>
                             <label for="form_plusone" class="ml-2 text-sm font-medium text-gray-900">Буду с
@@ -131,40 +131,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-6">
-                    <div class="flex items-start">
-                        <div class="flex h-5 items-center">
-                            <input id="childs" type="checkbox" value="true"
-                                   class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-orange-300">
-                        </div>
-                        <label for="childs" class="ml-2 text-sm font-medium text-gray-900">С детьми</label>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex h-5 items-center">
-                            <input id="oncar" type="checkbox" value=""
-                                   class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-orange-300">
-                        </div>
-                        <label for="oncar" class="ml-2 text-sm font-medium text-gray-900">На машине</label>
-                    </div>
-                </div>
-                @php
-                    $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь'];
-                @endphp
-                <div class="mb-6">
-                    @foreach ($buhlos as $buhlo)
+                <div class="mb-6 grid sm:grid-cols-2">
+                    <div>
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
-                                <input id="buhlo_{{ Str::slug($buhlo) }}" name="buhlo[]" type="checkbox"
-                                       value="{{ $buhlo }}"
-                                       class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-orange-300">
+                                <input id="childs" type="checkbox" value="true"
+                                       class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-neutral-300">
                             </div>
-                            <label for="buhlo_{{ Str::slug($buhlo) }}"
-                                   class="ml-2 text-sm font-medium text-gray-900">{{ $buhlo }}</label>
+                            <label for="childs" class="ml-2 text-sm font-medium text-gray-900">С детьми</label>
                         </div>
-                    @endforeach
+                        <div class="flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="oncar" type="checkbox" value=""
+                                       class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-neutral-300">
+                            </div>
+                            <label for="oncar" class="ml-2 text-sm font-medium text-gray-900">На машине</label>
+                        </div>
+                    </div>
+                    @php
+                        $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь'];
+                    @endphp
+                    <div>
+                        @foreach ($buhlos as $buhlo)
+                            <div class="flex items-start">
+                                <div class="flex h-5 items-center">
+                                    <input id="buhlo_{{ Str::slug($buhlo) }}" name="buhlo[]" type="checkbox"
+                                           value="{{ $buhlo }}"
+                                           class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-neutral-300">
+                                </div>
+                                <label for="buhlo_{{ Str::slug($buhlo) }}"
+                                       class="ml-2 text-sm font-medium text-gray-900">{{ $buhlo }}</label>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
                 <button type="submit"
-                        class="w-full rounded-lg bg-orange-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-orange-300 sm:w-auto">Отправить</button>
+                        class="w-full rounded-lg bg-neutral-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-neutral-800 focus:outline-none focus:ring-4 focus:ring-neutral-300 sm:w-auto">Отправить</button>
             </form>
 
         </div>
