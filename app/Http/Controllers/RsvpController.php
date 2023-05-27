@@ -13,6 +13,9 @@ class RsvpController extends Controller
         $msg[] = 'Имя: ' . $request->get('name');
         $msg[] = 'Статус: ' . $request->get('rsvp');
         $msg[] = 'Буду: ' . $request->get('count');
+        if ($request->get('para_name')) {
+            $msg[] = 'Буду c: ' . $request->get('para_name');
+        }
         $msg[] = 'С детьми: ' . $request->get('С_детьми', 'нет');
         $msg[] = 'На машине: ' . $request->get('На_машине', 'нет');
         $msg[] = 'Алко: ' . collect($request->get('buhlo', []))->join(', ');

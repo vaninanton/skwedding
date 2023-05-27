@@ -32,7 +32,10 @@
                 <span id="countdown">3:00:00</span>
             </div>
         </div>
-        <img src="{{ asset('img/sk.jpg') }}" alt="" class="order-1 w-full sm:order-2">
+        <picture>
+            <source srcset="{{ asset('img/sk.webp') }}" type="image/webp">
+            <img src="{{ asset('img/sk.jpg') }}" alt="" class="order-1 w-full sm:order-2" />
+        </picture>
     </div>
 
     <div class="">
@@ -41,7 +44,7 @@
             <div class="order-1 px-4 py-10 sm:order-2 sm:text-center">
                 <h3 class="mb-3 text-center text-4xl">Сбор гостей</h3>
                 <p class="text-center">28 июля 2023 в 16:00</p>
-                <p class="text-center">Загородный клуб «Завидное»</p>
+                <p class="text-center">Загородный клуб «ЗаВидное»</p>
                 <p class="text-sm">Адрес: Московская область, Ленинский р-н, пос. Измайлово, 23с1, банкетный зал №10.
                 </p>
                 <p>Встречаемся на фуршете, который будет проходить на улице перед залом.</p>
@@ -91,7 +94,7 @@
         <div class="sm:w-1/2">
             <h3 class="mb-4 text-center">Подтвердите присутствие</h3>
 
-            <form method="post" action="{{ route('rsvp') }}">
+            <form id="formdata" method="post" action="{{ route('rsvp') }}">
                 @csrf
                 <div class="mb-6">
                     <label for="fullname" class="mb-2 block text-sm font-medium text-gray-900">Ваше имя и
@@ -123,32 +126,32 @@
                     <div class="mb-6">
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
-                                <input id="form_one" type="radio" name="count" value="Буду один/одна"
-                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300"
-                                       required>
+                                <input id="form_one" type="radio" name="count" disabled value="Буду один/одна"
+                                       required
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300">
                             </div>
                             <label for="form_one" class="ml-2 text-sm font-medium text-gray-900">Буду один/одна</label>
                         </div>
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
-                                <input id="form_plusone" type="radio" name="count" value="Буду с парой"
-                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300"
-                                       required>
+                                <input id="form_plusone" type="radio" name="count" disabled value="Буду с парой"
+                                       required
+                                       class="focus:ring-3 h-4 w-4 rounded-full border border-gray-300 bg-gray-50 focus:ring-neutral-300">
                             </div>
                             <label for="form_plusone" class="ml-2 text-sm font-medium text-gray-900">Буду с
                                 парой</label>
+                        </div>
+                        <div id="para" class="mb-6 hidden">
+                            <label for="fullname" class="mb-2 block text-sm font-medium text-gray-900">Имя и
+                                фамилия</label>
+                            <input id="para_field" type="text" name="para_name"
+                                   class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-neutral-500 focus:ring-neutral-500"
+                                   placeholder=" ">
                         </div>
                     </div>
                 </div>
                 <div class="grid sm:grid-cols-2">
                     <div class="mb-6">
-                        <div class="flex items-start">
-                            <div class="flex h-5 items-center">
-                                <input id="childs" type="checkbox" name="С детьми" value="Да"
-                                       class="focus:ring-3 h-4 w-4 rounded border border-gray-300 bg-gray-50 focus:ring-neutral-300">
-                            </div>
-                            <label for="childs" class="ml-2 text-sm font-medium text-gray-900">С детьми</label>
-                        </div>
                         <div class="flex items-start">
                             <div class="flex h-5 items-center">
                                 <input id="oncar" type="checkbox" name="На машине" value="Да"
@@ -158,7 +161,7 @@
                         </div>
                     </div>
                     @php
-                        $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь'];
+                        $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь', 'Сок', 'Компотик', 'Чай'];
                     @endphp
                     <div class="mb-6">
                         @foreach ($buhlos as $buhlo)
