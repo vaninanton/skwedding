@@ -18,7 +18,7 @@ class RsvpController extends Controller
         $msg[] = 'Алко: ' . collect($request->get('buhlo', []))->join(', ');
 
         $url = 'https://api.telegram.org/bot' . config('app.telegram_token') . '/sendMessage';
-        $data['chat_id'] = -932289293;
+        $data['chat_id'] = -1001784018152;
         $data['parse_mode'] = 'html';
         $data['text'] = implode(PHP_EOL, $msg);
         Http::post($url, $data);
