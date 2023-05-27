@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\RsvpController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $weddingDay = today()
-        ->setTimezone('Europe/Moscow')
-        ->setDate(2023, 07, 28)
-        ->setTime(16, 0, 0);
-    $days = today()->diffInDays($weddingDay);
-    return view('welcome', compact('days'));
-});
+Route::get('/', IndexController::class);
+Route::post('/rsvp', RsvpController::class)->name('rsvp');

@@ -111,6 +111,8 @@ return [
 
     'faker_locale' => 'en_US',
 
+    'telegram_token' => env('TELEGRAM_TOKEN'),
+
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
