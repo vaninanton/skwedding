@@ -142,8 +142,6 @@
                                 парой</label>
                         </div>
                         <div id="para" class="mb-6 hidden">
-                            <label for="fullname" class="mb-2 block text-sm font-medium text-gray-900">Имя и
-                                фамилия</label>
                             <input id="para_field" type="text" name="para_name"
                                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-neutral-500 focus:ring-neutral-500"
                                    placeholder=" ">
