@@ -39,7 +39,7 @@
     </div>
 
     <div class="">
-        <div class="grid items-center justify-center bg-white/50 backdrop-blur-sm sm:grid-cols-2">
+        <div class="grid items-center justify-center bg-[#f0d4ba]/50 backdrop-blur-sm sm:grid-cols-2">
             <div id="map" class="order-2 min-h-[50vh] w-full text-center sm:order-1"></div>
             <div class="order-1 px-4 py-10 sm:order-2 sm:text-center">
                 <h3 class="mb-3 text-center text-4xl">Сбор гостей</h3>
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center bg-white/50 py-10 px-4 backdrop-blur-sm">
+    <div class="flex flex-col items-center justify-center bg-[#f0d4ba]/50 py-10 px-4 backdrop-blur-sm">
         <div class="text-center">
             <h3 class="mb-3 text-4xl">Дресс-код</h3>
             Уважаемые гости, мы будем Вам очень признательны, если в своём наряде Вы выберете эти оттенки.
@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center bg-white/50 py-10 px-4 backdrop-blur-sm">
+    <div class="flex flex-col items-center justify-center bg-[#f0d4ba]/50 py-10 px-4 backdrop-blur-sm">
         <div class="sm:w-1/2">
             <h3 class="mb-4 text-center">Подтвердите присутствие</h3>
 
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     @php
-                        $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь', 'Сок', 'Компотик', 'Чай'];
+                        $buhlos = ['Игристое', 'Вино', 'Крепкий алкоголь', 'Сок, Компотик, Чай'];
                     @endphp
                     <div class="mb-6">
                         @foreach ($buhlos as $buhlo)
@@ -1090,7 +1090,7 @@
         }
 
         function initBackground() {
-            //console.log("init background");
+            // console.log("init background");
         }
 
         function renderBackground() {
@@ -1198,7 +1198,7 @@
             //gl.bindFramebuffer(gl.FRAMEBUFFER, null);
             gl.bindFramebuffer(gl.FRAMEBUFFER, renderSpec.mainRT.frameBuffer);
             gl.viewport(0, 0, renderSpec.mainRT.width, renderSpec.mainRT.height);
-            gl.clearColor(0.005, 0, 0.05, 0);
+            gl.clearColor(0.005, 0, 0.1, 0);
             gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
             renderBackground();
@@ -1276,7 +1276,7 @@
                 makeCanvasFullScreen(canvas);
                 gl = canvas.getContext('experimental-webgl');
             } catch (e) {
-                alert("WebGL not supported." + e);
+                // alert("WebGL not supported." + e);
                 console.error(e);
                 return;
             }
