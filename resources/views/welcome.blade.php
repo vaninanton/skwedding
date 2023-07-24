@@ -112,8 +112,73 @@
 
     <div class="flex flex-col items-center justify-center bg-neutral-200/50 py-10 px-4 backdrop-blur-sm">
         <div class="text-center">
+            <div class="mb-4">
+                <h3>Тайминг:</h3>
+                <div>16:00 – сбор гостей, фуршет</div>
+                <div>16:30 – выездная регистрация </div>
+                <div>17:00 – начало банкета</div>
+                <div>23:00 – окончание банкета</div>
+            </div>
             <h3>План рассадки гостей</h3>
-            <p>Эта информация появится здесь перед свадьбой, обязательно ознакомьтесь.</p>
+            <div class="md:flex items-start justify-center">
+                <div class="border p-5">
+                    <div class="font-bold">Первый стол</div>
+                    <div>Анастасия Гетман</div>
+                    <div>Дмитрий Гетман</div>
+                    <div>Екатерина Икрянникова</div>
+                    <div>Кирилл Икрянников</div>
+                    <div>Инесса Кусь</div>
+                    <div>Анастасия Скворцова</div>
+                    <div>Никита Скворцов</div>
+                    <div>Ярослав Трембицкий</div>
+                </div>
+                <div class="border p-5">
+                    <div class="font-bold">Второй стол</div>
+                    <div>Людмила Скорондаева</div>
+                    <div>Ирина Одинцова</div>
+                    <div>Николай Наследухов</div>
+                    <div>Сергей Одинцов</div>
+                    <div>Артем Пархоменко</div>
+                    <div>Светлана Стожарова</div>
+                    <div>Николай Григорьев</div>
+                    <div>Анна Митяева</div>
+                </div>
+                <div class="border p-5">
+                    <div class="font-bold">Третий стол</div>
+                    <div>Татьяна Кузьмина</div>
+                    <div>Юрий Кузьмин</div>
+                    <div>Ольга Ермакова</div>
+                    <div>Алексей Кузьмин</div>
+                    <div>Оксана Кузьмина</div>
+                    <div>Денис Кузьмин</div>
+                    <div>Катя Кузьмина</div>
+                    <div>Александр Кузьмин</div>
+                    <div>Юлия Игонькина</div>
+                </div>
+                <div class="border p-5">
+                    <div class="font-bold">Четвертый стол</div>
+                    <div>Юрий Рудницкий</div>
+                    <div>Галина Рудниицкая</div>
+                    <div>Лиза Рудницкая</div>
+                    <div>Виолетта Рудницкая</div>
+                    <div>Виктория Ущеко</div>
+                    <div>Антон Ущеко</div>
+                    <div>Юлия Фарберова</div>
+                    <div>Сергей Фарберов</div>
+                    <div>Марк Фарберов</div>
+                </div>
+                <div class="border p-5">
+                    <div class="font-bold">Пятый стол</div>
+                    <div>Виктория Евстропова</div>
+                    <div>Наталья Кудрина</div>
+                    <div>Влад Егоров</div>
+                    <div>Анастасия Рудая</div>
+                    <div>Сабина Абдуллаева</div>
+                    <div>Евгений Кокорев</div>
+                    <div>Вероника Рожкова</div>
+                </div>
+            </div>
+            <p>В пределах одного стола рассадка свободная</p>
         </div>
     </div>
 
